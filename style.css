@@ -1,0 +1,591 @@
+/* Reset */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+/* Body */
+body{
+background:#ffffff;
+color:#111827;
+scroll-behavior:smooth;
+}
+
+/* Container */
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+/* Header */
+header{
+background:#535563;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+color:white;
+font-weight:600;
+
+/* Move logo more to left */
+margin-left:-120px;   /* You can change -10px to -20px if needed */
+}
+
+
+/* Nav */
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#cbd5e1;
+font-size:15px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+/* Hero Section */
+.hero{
+height:55vh;
+
+background:
+linear-gradient(rgba(2,6,23,0.6), rgba(2,6,23,0.6)),
+url("tech.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+color:white;
+padding:80px 0;
+}
+
+/* Hero Content */
+.hero-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:40px;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+.hero-text h3{
+color:#38bdf8;
+margin:10px 0;
+}
+
+.hero-text p{
+max-width:450px;
+line-height:1.6;
+color:#cbd5e1;
+}
+
+/* Hero Image */
+.hero-img img{
+width:260px;
+height:260px;
+
+border-radius:50%;
+object-fit:cover;
+
+border:4px solid white;
+background:white;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.hero-btns{
+margin-top:25px;
+}
+
+.btn{
+background:#38bdf8;
+color:#020617;
+padding:10px 22px;
+text-decoration:none;
+border-radius:6px;
+margin-right:10px;
+font-weight:600;
+}
+
+.btn-outline{
+border:2px solid #38bdf8;
+color:#38bdf8;
+padding:8px 20px;
+text-decoration:none;
+border-radius:6px;
+}
+
+.btn:hover,
+.btn-outline:hover{
+opacity:0.85;
+}
+
+/* Section */
+.section{
+padding:80px 0;
+text-align:center;
+}
+
+.section h2{
+font-size:28px;
+margin-bottom:20px;
+}
+
+/* Light */
+.light{
+background:#f9fafb;
+}
+
+/* Education */
+.edu-box{
+max-width:600px;
+margin:auto;
+background:white;
+padding:25px;
+border-radius:8px;
+border:1px solid #e5e7eb;
+}
+
+.edu-box h4{
+color:#2563eb;
+margin-bottom:5px;
+}
+
+/* Experience */
+.exp-box{
+max-width:700px;
+margin:20px auto;
+background:white;
+padding:20px;
+border-radius:8px;
+border:1px solid #e5e7eb;
+text-align:left;
+}
+
+.exp-box h4{
+margin-bottom:5px;
+color:#2563eb;
+}
+
+/* Certifications */
+.cert-list{
+max-width:600px;
+margin:20px auto 0;
+text-align:left;
+line-height:2;
+color:#374151;
+}
+
+.cert-list li{
+margin-left:20px;
+}
+
+/* ===== Numbered Certificate List ===== */
+
+.cert-list{
+max-width:750px;
+margin:auto;
+padding:0;
+list-style:none;
+counter-reset:cert-counter;
+}
+
+/* Each Item */
+.cert-list li{
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:10px 0;
+border-bottom:1px solid #e5e7eb;
+
+counter-increment:cert-counter;
+}
+
+/* Number + Name */
+.cert-name::before{
+content: counter(cert-counter) ". ";
+font-weight:600;
+margin-right:6px;
+color:#374151;
+}
+
+/* View Button */
+.cert-list a{
+border:1px solid #111827;
+padding:4px 14px;
+border-radius:4px;
+
+color:#111827;
+text-decoration:none;
+font-size:13px;
+font-weight:500;
+
+transition:0.2s;
+}
+
+.cert-list a:hover{
+background:#111827;
+color:white;
+}
+
+
+
+/* Skills */
+.skill-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.skill{
+background:white;
+padding:15px;
+border-radius:8px;
+border:1px solid #e5e7eb;
+font-weight:500;
+}
+
+/* Languages */
+.lang-box{
+display:flex;
+justify-content:center;
+gap:22px;
+margin-top:20px;
+}
+
+.lang-box span{
+background:white;
+color:black;
+padding:8px 18px;
+border-radius:20px;
+font-weight:500;
+}
+
+
+/* ===== SAME STYLE FOR ALL CARDS ===== */
+
+/* Education */
+.edu-box,
+
+/* Internship */
+.exp-box,
+
+/* Projects */
+.project-box,
+
+/* Certificates Container */
+.cert-list{
+
+background:linear-gradient(135deg,#f8fafc,#e0f2fe);
+
+border:1px solid #dbeafe;
+border-radius:12px;
+
+padding:25px;
+
+text-align:left;
+
+box-shadow:0 4px 12px rgba(0,0,0,0.06);
+
+transition:0.3s;
+}
+
+/* Hover Effect for All */
+.edu-box:hover,
+.exp-box:hover,
+.project-box:hover,
+.cert-list:hover{
+
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Title Color */
+.edu-box h4,
+.exp-box h4,
+.project-box h3{
+
+color:#1e40af;
+}
+
+
+
+/* Contact */
+.contact p{
+font-size:16px;
+margin:12px 0;
+}
+
+.contact i{
+
+margin-right:8px;
+}
+
+.contact a{
+text-decoration:none;
+color:#111827;
+font-weight:500;
+}
+
+.contact a:hover{
+color:#2563eb;
+text-decoration:underline;
+}
+
+/* Footer */
+footer{
+background:#020617;
+color:#94a3b8;
+text-align:center;
+padding:15px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.hero-content{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-img img{
+width:200px;
+height:200px;
+margin-top:20px;
+}
+
+nav{
+display:none;
+}
+
+.hero-text h1{
+font-size:32px;
+}
+
+}
+/* ===== Modern Section Style ===== */
+
+/* Section Container */
+.section .container{
+max-width:1000px;
+}
+
+/* About Card */
+#about .container{
+background:white;
+padding:40px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* Education / Internship / Projects Card */
+.edu-box,
+.exp-box,
+.project-box{
+transition:0.3s;
+}
+
+.edu-box:hover,
+.exp-box:hover,
+.project-box:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Two Column Layout (Desktop) */
+@media(min-width:900px){
+
+#education .container,
+#internship .container,
+#projects .container{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:start;
+}
+
+#education h2,
+#internship h2,
+#projects h2{
+grid-column:1/-1;
+text-align:left;
+}
+}
+
+/* Skills Card Effect */
+.skill{
+transition:0.3s;
+}
+
+.skill:hover{
+background:#38bdf8;
+color:#020617;
+transform:scale(1.05);
+}
+
+/* Certifications Modern */
+.cert-list{
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Languages Modern */
+.lang-box span{
+box-shadow:0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Spacing */
+.section{
+padding:90px 0;
+}
+
+/* ===== About Same as Other Cards ===== */
+
+.about-box{
+background:linear-gradient(135deg,#f8fafc,#e0f2fe);
+
+border:1px solid #dbeafe;
+border-radius:12px;
+
+padding:25px;
+
+text-align:left;
+
+box-shadow:0 4px 12px rgba(0,0,0,0.06);
+
+transition:0.3s;
+}
+
+.about-box:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.about-box p{
+font-size:16px;
+line-height:1.7;
+color:#374151;
+margin-bottom:12px;
+}
+
+/* ===== ABOUT ONLY BOX STYLE ===== */
+
+#about .about-box{
+
+max-width:850px;
+margin:auto;
+
+background:linear-gradient(135deg,#f8fafc,#e0f2fe);
+
+border:1px solid #dbeafe;
+border-radius:14px;
+
+padding:35px;
+
+text-align:left;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
+
+transition:0.3s;
+}
+
+/* Hover Effect */
+#about .about-box:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* About Text */
+#about .about-box p{
+font-size:16px;
+line-height:1.8;
+color:#374151;
+margin-bottom:15px;
+}
+
+
+/* ===== CERTIFICATION ONLY BOX STYLE ===== */
+
+#certifications .cert-list{
+
+max-width:850px;
+margin:auto;
+
+background:linear-gradient(135deg,#f8fafc,#e0f2fe);
+
+border:1px solid #dbeafe;
+border-radius:14px;
+
+padding:35px;
+
+text-align:left;
+
+box-shadow:0 6px 18px rgba(0,0,0,0.1);
+
+transition:0.3s;
+}
+
+/* Hover Effect */
+#certifications .cert-list:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* Certificate List Item */
+#certifications .cert-list li{
+padding:10px 0;
+border-bottom:1px solid #e5e7eb;
+}
+
+/* Last Line Remove */
+#certifications .cert-list li:last-child{
+border-bottom:none;
+}
+
+
+/* ===== Project Link Button ===== */
+
+.project-link{
+display:inline-block;
+
+margin-top:12px;
+
+padding:6px 16px;
+
+background:#5c6568;
+color:white;
+
+text-decoration:none;
+font-size:14px;
+font-weight:500;
+
+border-radius:5px;
+
+transition:0.2s;
+}
+
+.project-link:hover{
+background:#010309;
+}
